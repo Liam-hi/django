@@ -1,0 +1,314 @@
+body {
+  animation: slide 60s linear infinite alternate;
+  background-image: url("https://free4kwallpapers.com/uploads/wallpaper/live-wallpaper-sky-full-of-stars-1920x1080-wallpaper.jpg");
+  background-repeat: repeat;
+
+}
+
+
+h1 {
+  color: white;
+  text-align: center;
+  font-size: 28px;
+  font-size: 5.5vw;
+  font-family: 'Goldman Sans';
+}
+
+h3 {
+  color: white;
+  text-align: center;
+  font-size: 26px;
+  font-family: 'Goldman Sans';
+}
+
+h2 {
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  font-family: 'Goldman Sans';
+}
+
+
+h4 {
+  color: white;
+  text-align: center;
+  font-size: 28px;
+  font-family: 'Goldman Sans';
+}
+
+p {
+  color: gray;
+  text-align: center;
+  font-size: 12px;
+  font-family: 'SFMono';
+}
+
+
+
+  .button {
+
+    display:block;
+    background: black;
+    font-family: 'Inter';
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    color: white;
+    border: 1px solid black;
+    font-size: 14px;
+  }
+
+  .container {
+    height: 50px;
+    position: relative;
+    border: 3px solid black;
+  }
+
+  .center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .typeW {
+    align-items: center;
+    height: 52px;
+    width: 100%;
+    justify-content: center;
+    text-decoration: none;
+    margin-top: 7px;
+    margin-bottom: 50px;
+  }
+
+  .title {
+
+    height: 70px;
+    width: 100%;
+    background: white;
+  }
+
+  .title2 {
+    align-items: center;
+    height: 52px;
+    width: 100%;
+    justify-content: center;
+    text-decoration: none;
+    margin-top: 7px;
+    margin-bottom: 50px;
+  }
+
+  .footer {
+    color: white;
+    align-items: center;
+    position: fixed;
+    height: 100px;
+
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+
+    justify-content: center;
+    font-size: 12px;
+}
+
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: 20px;
+  left: 20px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a
+{
+  text-decoration: none;
+  color: black;
+
+  transition: color 0.3s ease;
+}
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+
+  cursor: pointer;
+
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+
+  -webkit-touch-callout: none;
+}
+
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: black;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: black;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu
+{
+  position: absolute;
+
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+
+  background: tr;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 16px;
+  font-family: 'SFMono';
+}
+
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
+@keyframes slide {
+  to {
+    background-position: 0 50%;
+  }
+}
+
+.search {
+  position: relative;
+  width: 300px;
+}
+.magnifying-glass {
+  position: relative;
+  transform: translateX(40%);
+  transition: transform 500ms;
+}
+.search.active .magnifying-glass {
+  transform: translateX(-7%);
+}
+.magnifying-glass-path {
+  fill:none;
+  stroke-dasharray: 210 808;
+  stroke-linecap:round;
+  stroke-width:6;
+  stroke:white;
+  transition: stroke-dasharray 500ms, stroke-dashoffset 500ms;
+}
+.search.active .magnifying-glass-path {
+  stroke-dasharray: 580 808;
+  stroke-dashoffset: -224px;
+}
+.x {
+  fill:none;
+  stroke-dasharray: 56 92;
+  stroke-dashoffset: -92px;
+  stroke-linecap:round;
+  stroke-width:6;
+  stroke:white;
+  transition: stroke-dashoffset 500ms;
+  visibility: hidden;
+}
+.search.active .x {
+  visibility: visible;
+}
+.search.searching .x {
+  stroke-dashoffset: 0;
+}
+.input {
+  background: transparent;
+  font-family: 'Goldman Sans';
+  color: white;
+  border: 0;
+  font-size: 1.2em;
+  left: 20px;
+  outline: 0 !important;
+  position: absolute;
+  top: 4px;
+}
+.overlay {
+  background: rgba(0,0,0,0);
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  transition: background 300ms;
+}
+.overlay-1 {
+  height: 64px;
+  left: 110px;
+  top: -10px;
+  width: 64px;
+}
+.overlay-2 {
+  height: 38px;
+  left: 240px;
+  top: 0px;
+  width: 38px;
+}
+.overlay:hover {
+  background: rgba(0,0,0,0.08);
+}
+.search.active .overlay-1 {
+  visibility: hidden;
+}
+.search:not(.active) .overlay-2,
+.search:not(.searching) .overlay-2 {
+  visibility: hidden;
+}
